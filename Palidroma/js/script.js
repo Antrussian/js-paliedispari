@@ -9,22 +9,9 @@ E' vietato usare split(), reverse() e simili.
 
 let userChoice = prompt ('Inserisci una parola');
 
-let caratteri = palindromaCheck(userChoice);
-let caratteriInvertiti = invertiArray(caratteri);
+let parolaInvertita = palindromaCheck(userChoice);
 
-
-let risultato;
-
-
-if ( caratteriInvertiti === userChoice) {
-        risultato === true;
-        
-}
-
-else {
-    risultato === 'La parola non è palindroma :('
-    
-}
+console.log(parolaInvertita);
 
 
 
@@ -38,27 +25,28 @@ else {
 function palindromaCheck(wordCheck) {
     
     let arrayCaratteri = [];
+    let arrayInvertito = [];
+
 
 for (let i = 0; i < wordCheck.length; i++) {
    arrayCaratteri.push(wordCheck[i]);
 
 }
-return arrayCaratteri;
 
+
+for (let i = arrayCaratteri.length - 1; i >= 0; i--) {
+    arrayInvertito.push(arrayCaratteri[i]);
 }
 
 
 
-function invertiArray(array) {
+let parolaInserita = arrayCaratteri.join('');
+let parolaOutput = arrayInvertito.join('');
+
+
+return parolaInserita === parolaOutput;
 
    
-    let arrayInvertito = [];
-
-    for (let i = array.length - 1; i >= 0; i--) {
-        arrayInvertito.push(array[i]);
-    }
-
-    return arrayInvertito;
 }
 
 
