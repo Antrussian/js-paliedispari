@@ -9,9 +9,9 @@ E' vietato usare split(), reverse() e simili.
 
 let userChoice = prompt ('Inserisci una parola');
 
-let parolaInvertita = palindromaCheck(userChoice);
+let isPalindroma = palindromaCheck(userChoice);
 
-console.log(parolaInvertita);
+console.log(isPalindroma);
 
 
 
